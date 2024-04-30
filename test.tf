@@ -9,7 +9,7 @@ resource "null_resource" "print_env_var" {
   }
 
   provisioner "local-exec" {
-    command = "echo \"The value of ${var.env_var_name} is: $${${var.env_var_name}}\""
+    command = "env"
   }
 }
 
